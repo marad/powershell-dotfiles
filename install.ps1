@@ -18,7 +18,7 @@ if (!$(Test-Path -Path "$HOME/.wezterm.lua")) {
 if (Test-Path -Path $profile) {
     Remove-Item -Path $profile
 }
-New-Item -ItemType SymbolicLink -Target "$scriptPath/profile.ps1" -Path "$profile" | Out-Null
+New-Item -ItemType SymbolicLink -Target "$scriptPath/profile.ps1" -Path "$profile" -Force
 
 # Helper functions
 function Install-Winget-Package {
