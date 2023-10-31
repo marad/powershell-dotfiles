@@ -20,6 +20,7 @@ if (Test-Path -Path $profile) {
 }
 New-Item -ItemType SymbolicLink -Target "$scriptPath/profile.ps1" -Path "$profile" | Out-Null
 
+# Helper functions
 function Install-Winget-Package {
     param (
         $Package,
