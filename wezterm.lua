@@ -16,7 +16,7 @@ config.window_frame = {
     font_size = 12.0,
 }
 
-config.window_background_opacity = 0.95
+--config.window_background_opacity = 0.95
 
 --config.font = wezterm.font('JetBrainsMono Nerd Font')
 --config.font = wezterm.font('FiraCode Nerd Font Mono')

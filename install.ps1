@@ -20,6 +20,12 @@ if (Test-Path -Path $profile) {
 }
 New-Item -ItemType SymbolicLink -Target "$scriptPath/profile.ps1" -Path "$profile" -Force
 
+$starshipConfigPath = "$HOME/.config/starship.toml"
+if (Test-Path -Path $starshipConfigPath) {
+    Remove-Item -Path $starshipConfigPath
+}
+New-Item -ItemType SymbolicLink -Target "$scriptPath/starship.toml" -Path "$starshipConfigPath" -Force
+
 # Helper functions
 function Install-Winget-Package {
     param (
