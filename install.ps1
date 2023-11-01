@@ -55,11 +55,12 @@ function Install-Cargo-Package {
 
 Install-Winget-Package -Package neovim -Command nvim
 Install-Winget-Package -Package wezterm -Command wezterm
+Install-Winget-Package -Package fzf -Command fzf
 
 $cargoInstalled = get-command cargo -ErrorAction SilentlyContinue
 if ($cargoInstalled) {
+    Install-Cargo-Package -Package sccache -Command sccache
     Install-Cargo-Package -Package eza -Command eza
-    Install-Cargo-Package -Package fzf -Command fzf
     Install-Cargo-Package -Package ripgrep -Command rg
     Install-Cargo-Package -Package bat -Command bat
     Install-Cargo-Package -Package starship -Command starship
