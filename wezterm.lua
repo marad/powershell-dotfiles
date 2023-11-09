@@ -21,12 +21,14 @@ config.window_frame = {
 --config.font = wezterm.font('JetBrainsMono Nerd Font')
 --config.font = wezterm.font('FiraCode Nerd Font Mono')
 config.font = wezterm.font_with_fallback({
+    'Cascadia Code',
     'JetBrainsMono Nerd Font',
     --'Noto Color Emoji',
     'Segoe UI Symbol',
 })
-config.font_size = 12.0
+config.font_size = 13.0
 config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
+--config.default_prog = { 'C:\\Windows\\System32\\wsl.exe', '-d', 'arch' }
 config.adjust_window_size_when_changing_font_size = false
 config.audible_bell = 'Disabled'
 config.hide_tab_bar_if_only_one_tab = true
