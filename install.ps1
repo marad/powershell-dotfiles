@@ -18,6 +18,15 @@ if (!$(Test-Path -Path "$HOME/.wezterm.lua"))
     Write-Output "Wezterm configuration already in place."
 }
 
+# Setup alacritty config
+if (!$(Test-Path -Path "$Env:APPDATA/alacritty/alacritty.toml"))
+{
+    New-Item -ItemType SymbolicLink -Target "$scriptPath/alacritty.toml" -Path "$Env:APPDATA/alacritty/alacritty.toml" -Force
+} else 
+{
+    Write-Output "Alacritty config already in place"
+}
+
 # Setup PowerShell profile
 if (Test-Path -Path $profile)
 {
